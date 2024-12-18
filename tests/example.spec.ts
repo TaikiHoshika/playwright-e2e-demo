@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test('check meta tags', async ({ page }) => {
-  await page.goto("http://localhost:3000/");
+  await page.goto("/");
 
   await expect(page.locator('meta[charset="utf-8"]')).not.toBeNull();
   await expect(page.locator('title')).not.toBeNull();
